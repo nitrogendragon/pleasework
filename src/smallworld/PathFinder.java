@@ -393,7 +393,7 @@ public class PathFinder {
 
 
     private void report( String airport ) {
-            if(this.distanceTo(airport)<=10){
+            if(this.distanceTo(airport)<=2 && this.distanceTo(airport)>0){
             for (String v : this.pathTo(airport)) {
                 StdOut.println("   " + v);
             }
