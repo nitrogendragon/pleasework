@@ -22,7 +22,7 @@ public class Enemy extends GlobalPosition {
     
     public void update(){
         x+=speed;
-        y+=speedy;
+        //y+=speedy;
         if(x>Animation.WIDTH-62){
             speed=-5;
             speedy=-5;
