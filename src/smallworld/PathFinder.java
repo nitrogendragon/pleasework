@@ -392,14 +392,14 @@ public class PathFinder {
     } // main( String [] )
 
 
-    private void report( String airport ) {
-            if(this.distanceTo(airport)<=2 && this.distanceTo(airport)>0){
-            for (String v : this.pathTo(airport)) {
-                StdOut.println("   " + v);
-            }
+    private void report( String subway ) {
+        int x=15;
+        int i=0;
+            if(this.distanceTo(subway)<=x && this.distanceTo(subway)>i){
+            for (String v : this.pathTo(subway)) {
+                StdOut.println("   " + v);} 
+            StdOut.println("distance " + this.distanceTo(subway));}
             
-            StdOut.println("distance " + this.distanceTo(airport));
-            }
     } // report( PathFinder, String )
     
 } // PathFinder

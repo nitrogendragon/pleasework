@@ -87,7 +87,14 @@ public class Graph {
         validateVertex(v);
         return st.get(v).size();
     }
-
+    public int avgDegree(){
+        double total = 0;
+        for(String vertex: this.vertices()){
+            total+= this.degree(vertex);
+        }
+        double average = total/this.V();
+       
+    
    /**
      * Add edge v-w to this graph (if it is not already an edge)
      */
@@ -152,16 +159,69 @@ public class Graph {
         }
         return s.toString();
     }
-
+    private String makeName(int a){
+        return "v" + a;
+    }
+    private String makeName( int row, int column){
+        return "v" + row + "-" + column;
+    }
+    public void ringGraph(int r){
+            for(int i = 0; i<r-1; i++){
+            this.addEdge(makeName(i), makeName(i +1));
+}
+            this.addEdge(makeName(r-1), makeName(0));
+    }
+    public void gridgraph(int n){
+        for(int i = 0; i<n; i++){
+            for(int j = 0; j <n; j++){
+                this.addEdge(makeName(i,j),makeName(i, j+1));
+                this.addEdge(makeName(i,j), makeName(i+1,j));
+            }
+        }
+        for(int i=0;i<n-1; i++){
+        this.addEdge(makeName(i, n-1), makeName(i+1,n-1));
+        
+    }
+        for( int i=0; i< n-1; i++){
+            this.addEdge(makeName(n-1,i), makeName(n-1, i+1));
+        }
+    }
+    public void completegraph(int v){
+        for(int i = 0; i < v; i++){
+         for(int a = i + 1; a < v; a++){
+             this.addEdge(makeName(i), makeName(a));
+         }
+    }
+    }
+    public void writeDotFile(){
+        for( String u : this.vertices()){
+            for( String v : this.vertices()){
+                String a = u;
+                String b = v;
+                if(u.compareTo(v)>0)
+                a =v;
+                b= u;
+                if (this.hasEdge(a,b)){
+                System.out.println(a + "->"+ b + ";");
+                    }
+            
+                        }
+            }
+        }
+        
+    }
     public static void main(String[] args) {
         Graph G = new Graph();
-        G.addEdge("A", "B");
-        G.addEdge("A", "C");
-        G.addEdge("C", "D");
-        G.addEdge("D", "E");
-        G.addEdge("D", "G");
-        G.addEdge("E", "G");
-        G.addVertex("H");
+        G.gridgraph(4);
+        System.out.println(G);
+    
+//        G.addEdge("A", "B");
+//        G.addEdge("A", "C");
+//        G.addEdge("C", "D");
+//        G.addEdge("D", "E");
+//        G.addEdge("D", "G");
+//        G.addEdge("E", "G");
+//        G.addVertex("H");
 
         // print out graph
         StdOut.println(G);
