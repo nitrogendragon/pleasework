@@ -22,12 +22,13 @@ public class Game extends JPanel implements ActionListener{
     Timer gamelooptimer;
     Player p;
     Controller c;
+    Enemy en;
     public Game(){
         setFocusable(true);
     
         gamelooptimer = new Timer(10, this);
         gamelooptimer.start();
-        
+        en = new Enemy(50,50);
         p = new Player(100,100);
         c = new Controller();
         addKeyListener(new KeyInput(p));
@@ -41,6 +42,7 @@ public class Game extends JPanel implements ActionListener{
         g2d.drawImage(getBackgroundImage(),0,0,this.getWidth(),this.getHeight(),this);
         p.draw(g2d);
         c.draw(g2d);
+        en.draw(g2d);
         
     }
     
@@ -48,10 +50,13 @@ public class Game extends JPanel implements ActionListener{
         ImageIcon i = new ImageIcon(getClass().getResource(background));
         return i.getImage();
     }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
     p.update();
     c.update();
+    en.update();
+    
     repaint(); 
         
 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
