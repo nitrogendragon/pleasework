@@ -18,21 +18,21 @@ public class Controller {
 
      
     public Controller(){
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
-        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
+//        addEnemy(new Enemy((int)(Math.random()*1200),(int)(Math.random()*540)));
         
        
         
