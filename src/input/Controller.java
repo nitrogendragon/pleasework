@@ -9,7 +9,7 @@ import objects.Enemy;
 import objects.Player;
 import smallworld.Animation;
 
-
+//not used atm but creates LinkedList for Enemy to make it easier to make multiple enemies
 public class Controller {
     static LinkedList<Enemy> e = new LinkedList<Enemy>();
     

@@ -10,7 +10,7 @@ import java.util.LinkedList;
 import javax.swing.ImageIcon;
 import smallworld.GlobalPosition;
 
-
+//Not used atm
 public class Player extends GlobalPosition {
     
     private String playerimage ="/resources/train.png";

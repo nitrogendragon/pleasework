@@ -16,7 +16,7 @@ import javax.swing.Timer;
 import objects.Enemy;
 import objects.Player;
 import objects.Station;
-
+//Uses most all classes and basically creates the animation
 public class Game extends JPanel implements ActionListener {
 
     private static final long serialVersionUID = 1L;
@@ -26,11 +26,11 @@ public class Game extends JPanel implements ActionListener {
     Controller c;
     Enemy en;
     ArrayList<Station> stations;
-
+//Creates an ArrayList of all the stations to make it easier to make stations and use collision detection.
     public ArrayList<Station> getStations() {
         return stations;
     }
-
+//Sets up timer for updating the animation and sets coordinates of Enemy objects along with stations and their motion values.
     public Game() {
         setFocusable(true);
 
@@ -63,7 +63,7 @@ public class Game extends JPanel implements ActionListener {
         
         //addKeyListener(new KeyInput(p));
     }
-
+//Draws background image of Tokyo Subway along with Enemy and stations.
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -77,12 +77,12 @@ public class Game extends JPanel implements ActionListener {
         }
 
     }
-
+//Grabs the background imaqe and returns it.
     public Image getBackgroundImage() {
         ImageIcon i = new ImageIcon(getClass().getResource(background));
         return i.getImage();
     }
-
+//Updates positions allowing for the animation to be shown.
     @Override
     public void actionPerformed(ActionEvent e) {
         //p.update();

@@ -6,18 +6,21 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import smallworld.Animation;
 import smallworld.GlobalPosition;
-
+/**
+ The Enemy class creates an image and gives it coordinates for being plotted on the window as well as deals with its speed and implements collision detection to change the x and y direction speed of the image as it moves along the screen.
+ 
+ */
 public class Enemy extends GlobalPosition {
 
     private String enemyimage = "/resources/redbox.png";
 
     int speed = 0;
     int speedy = 0;
-
+//sets up x and y coordinate specification for the Enemy object
     public Enemy(int x, int y) {
         super(x, y);
     }
-
+//sets up the speed of the object and sets up collision detection with stations. Also determines loops of animations as Enemy's move along their course over and over again.
     public void update() {
         x += speed;
         y += speedy;
@@ -176,10 +179,10 @@ public class Enemy extends GlobalPosition {
             speed = 5;
             speedy = 0;
         }*/
-        if (x > Animation.WIDTH - 62 && y == 344) {
-            x = 0;
-            y = 50;
-        }
+//        if (x > Animation.WIDTH - 62 && y == 344) {
+//            x = 0;
+//            y = 50;
+//        }
 
 //        if(x>Animation.WIDTH-62){
 //            speed=-5;
@@ -204,24 +207,24 @@ public class Enemy extends GlobalPosition {
 //        
 //    }
     }
-
+//tells the program to draw the Enemy at the x,y coordiantes specified in Game
     public void draw(Graphics2D g2d) {
         g2d.drawImage(getEnemyImage(), x, y, null);
     }
-
+//creates/determines collision detection with the Stations
     public boolean collidesWith(Station st) {
         return getBounds().intersects(st.getBounds());
     }
-    
+    //Sets speed... used in collision detection with Stations
     public void setSpeed(int x, int y){
         this.speed = x;
         this.speedy = y;
     }
-
+//sets bounds of rectangles... used in collison detection
     public Rectangle getBounds() {
         return new Rectangle(x, y, 20, 20);
     }
-
+//grabs the image used for Enemy and returns it
     public Image getEnemyImage() {
         ImageIcon i = new ImageIcon(getClass().getResource(enemyimage));
         return i.getImage();
